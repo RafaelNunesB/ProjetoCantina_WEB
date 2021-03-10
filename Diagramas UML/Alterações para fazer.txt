@@ -1,8 +1,0 @@
-(atributo de conta)
-(situaçao do produto e do pedido)
-(categoria de produto)
-
-(finalizar o pedido do cliente)
-(cadastrar informações do cliente)
-
-(pedido finalizado)
