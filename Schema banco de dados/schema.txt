@@ -1,0 +1,77 @@
+CRIAR TABELA `Pedido` (
+	`id` int NOT NULL AUTO_INCREMENT,
+	`id_cliente` int NOT NULL,
+	`id_situacao` int NOT NULL,
+	`preco_total` double NOT NULL,
+	`data` DATA NÃO NULO,
+	`data_retirada` DATE NOT NULL,
+	CHAVE PRIMÁRIA (`id`)
+);
+
+CRIAR TABELA `cliente` (
+	`id` int NOT NULL AUTO_INCREMENT,
+	`nome_completo` varchar (255) NÃO NULO,
+	`credito` FLOAT NOT NULL,
+	`picpay` varchar (255) NÃO NULO,
+	`pix` varchar (255) NÃO NULO,
+	`email` varchar (255) NÃO NULO,
+	`professor` bool NOT NULL,
+	`aluno` bool NOT NULL,
+	`visitante` bool NOT NULL,
+	`administrativo` bool NOT NULL,
+	`celular` varchar (255) NÃO NULO,
+	CHAVE PRIMÁRIA (`id`)
+);
+
+CRIAR TABELA `recarga` (
+	`id` int NOT NULL AUTO_INCREMENT,
+	`data` DATA NÃO NULO,
+	`valor_recarga` duplo NOT NULL,
+	`id_cliente` int NOT NULL,
+	CHAVE PRIMÁRIA (`id`)
+);
+
+CRIAR TABELA `categoria` (
+	`id` int NOT NULL AUTO_INCREMENT,
+	`nome` varchar (255) NÃO NULO,
+	`subcategoria` int NOT NULL,
+	CHAVE PRIMÁRIA (`id`)
+);
+
+CRIAR TABELA `produto` (
+	`id` int NOT NULL AUTO_INCREMENT,
+	`descricao` varchar (255) NÃO NULO,
+	`preco` double NOT NULL,
+	`disponivel` BOOLEAN NOT NULL,
+	`id_categoria` int NOT NULL,
+	CHAVE PRIMÁRIA (`id`)
+);
+
+CRIAR TABELA `item_pedido` (
+	`id` int NOT NULL AUTO_INCREMENT,
+	`id_pedido` int NOT NULL,
+	`id_produto` int NOT NULL,
+	`quantidade` int NOT NULL,
+	`preco_unitario` double NOT NULL,
+	CHAVE PRIMÁRIA (`id`)
+);
+
+CRIAR TABELA `situacao_pedido` (
+	`id` int NOT NULL AUTO_INCREMENT,
+	`nome` varchar (255) NÃO NULO,
+	CHAVE PRIMÁRIA (`id`)
+);
+
+ALTER TABLE `Pedido` ADICIONE CONSTRAINT` Pedido_fk0` CHAVE ESTRANGEIRA (`id_cliente`) REFERÊNCIAS` cliente` (`id`);
+
+ALTER TABLE `Pedido` ADD CONSTRAINT` Pedido_fk1` CHAVE ESTRANGEIRA (`id_situacao`) REFERÊNCIAS` situacao_pedido` (`id`);
+
+ALTER TABLE `recarga` ADD CONSTRAINT` recarga_fk0` CHAVE ESTRANGEIRA (`id_cliente`) REFERÊNCIAS` cliente` (`id`);
+
+ALTER TABLE `categoria` ADD CONSTRAINT` categoria_fk0` CHAVE ESTRANGEIRA (`subcategoria`) REFERÊNCIAS` categoria` (`id`);
+
+ALTER TABLE `produto` ADICIONE CONSTRAINT` produto_fk0` CHAVE ESTRANGEIRA (`id_categoria`) REFERÊNCIAS` categoria` (`id`);
+
+ALTER TABLE `item_pedido` ADD CONSTRAINT` item_pedido_fk0` CHAVE ESTRANGEIRA (`id_pedido`) REFERÊNCIAS` Pedido` (`id`);
+
+ALTER TABLE `item_pedido` ADD CONSTRAINT` item_pedido_fk1` CHAVE ESTRANGEIRA (`id_produto`) REFERÊNCIAS` produto` (`id`);
