@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Conta</title>
+
+    <link rel="stylesheet" href="css/cadastroStyle.css">
+</head>
+<body>
+    <form class="form--default" action="" method="POST">
+        <legend class="form__legend--hidden">Cadastro de Usuário</legend>
+
+        <label for="nome">Nome completo</label>
+        <input type="text" name="nome" id="nome" placeholder="Ex.: Fulano de Oliveira" autofocus>
+
+        <label for="numeroDaMatricula">Número da matrícula</label>
+        <input type="number" name="numeroDaMatricula" id="numeroDaMatricula" placeholder="Ex.: 6919100000">
+
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" id="senha" placeholder="Senha">
+        <label for="confirmarSenha">Confirme sua senha</label>
+        <input type="password" name="confirmarSenha" id="confirmarSenha" placeholder="Confirmar Senha">
+
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" placeholder="Ex.: cantina@hotmail.com">
+
+        <input class="form__buttom--center" type="submit" value="Cadastrar">
+    </form>
+</body>
+</html>
