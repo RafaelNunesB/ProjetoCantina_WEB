@@ -1,0 +1,17 @@
+/* Formatações Gerais de ELEMENTOS */
+body {
+    margin: 0;
+}
+
+/* Formatações Gerais de CLASSES */
+.a--no-default-style {
+    text-decoration: none;
+    color: black;
+}
+
+/* Formatações da Página [Top to Bottom] */
+/* Header Lateral */
+.header--left {
+    background-color: #eee;
+    text-align: center;
+}

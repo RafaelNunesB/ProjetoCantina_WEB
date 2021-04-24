@@ -7,50 +7,45 @@
     <title>Cardápio</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="icons/style.css">
 </head>
 <body>
-    <header class="header--top">
-        <a href="#">
-            <span class="icon-menu header__span--icon-menu"></span>
-        </a>
+    <header>
+        <nav>
+            <ul class="header__ul--lines">
+                <li class="header__li--line"><a class="a--no-default-style" href="https://unisales.br/" target="_blank">Site da Unisales</a></li>
+                <li class="header__li--line"><a class="a--no-default-style" href="../Registro de Conta/cadastro.html">Registrar Conta</a></li>
+                <li class="header__li--line"><a class="a--no-default-style" href="#">Fazer Login</a></li>
+            </ul>
+        </nav>
     </header>
-    <main class="main--center">
-        <section class="main__section--cards">
-            <img src="images/comida1.jpg" alt="Descrição da comida">
-        </section>
-        <section class="main__section--cards">
-            <img src="images/comida2.jpg" alt="Descrição da comida">
-        </section>
-        <section class="main__section--cards">
-            <img src="images/comida3.jpg" alt="Descrição da comida">
-        </section>
-        <section class="main__section--cards">
-            <img src="images/comida4.jpg" alt="Descrição da comida">
-        </section>
-        <section class="main__section--cards">
-            <img src="images/comida5.jpg" alt="Descrição da comida">
-        </section>
-        <section class="main__section--cards">
-            <img src="images/comida6.jpg" alt="Descrição da comida">
-        </section>
-        <section class="main__section--cards">
-            <img src="images/comida7.jpg" alt="Descrição da comida">
-        </section>
-        <section class="main__section--cards">
-            <img src="images/comida8.jpg" alt="Descrição da comida">
-        </section>
-        <section class="main__section--cards">
-            <img src="images/comida9.jpg" alt="Descrição da comida">
-        </section>
-        <section class="main__section--cards">
-            <img src="images/comida10.jpg" alt="Descrição da comida">
-        </section>
-        <section class="main__section--cards">
-            <img src="images/comida11.jpg" alt="Descrição da comida">
-        </section>
-        <section class="main__section--cards">
-            <img src="images/comida12.jpg" alt="Descrição da comida">
+
+    <main>
+        <!-- As seções onde estaram os produtos será inserida com JS, caso o JS esteja desabilitado, mostrar os produtos que raramente estão com falta no estoque para ainda sim existir algum conteúdo para o usuário acessar -->
+        <section class="section--products">
+            <div class="section__div--product">
+                <a href="../Produtos/001/coxinha.html"><img src="images/coxinha.jpg" alt="Coxinha"></a>
+            </div>
+            <div class="section__div--product">
+                <a href="../Produtos/002/enroladinho_queijo_presunto.html"><img src="images/enroladinho_de_presunto_e_queijo.jpg" alt="Coxinha"></a>
+            </div>
+            <div class="section__div--product">
+                <a href="#"><img src="images/enroladinho_de_salsisha.jpg" alt="Coxinha"></a>
+            </div>
+            <div class="section__div--product">
+                <a href="#"><img src="images/esfiha.jpg" alt="Coxinha"></a>
+            </div>
+            <div class="section__div--product">
+                <a href="#"><img src="images/kibe.jpg" alt="Coxinha"></a>
+            </div>
+            <div class="section__div--product">
+                <a href="#"><img src="images/mini_pizza.jpg" alt="Coxinha"></a>
+            </div>
+            <div class="section__div--product">
+                <a href="#"><img src="images/misto.jpg" alt="Coxinha"></a>
+            </div>
+            <div class="section__div--product">
+                <a href="#"><img src="images/pastel.jpg" alt="Coxinha"></a>
+            </div>
         </section>
     </main>
 </body>

@@ -6,16 +6,15 @@ body {
 label {
     margin-bottom: 0.25em;
     display: block;
+    font-size: 1.5em;
 }
 
 input:not([type=submit]) {
     display: block;
     width: 100%;
     margin-bottom: 1em;
-
     padding: 1em;
     box-sizing: border-box;
-    font-size: 1em;
     border: none;
     outline: none;
     border-radius: 5px;
@@ -25,19 +24,35 @@ input:not([type=submit]) {
         border-bottom: 3px solid darkorange;
     }
 
+    input:not([type="submit"])::placeholder {
+        font-size: 1.25em;
+    }
+
 /* Formatações Gerais de CLASSES */
 
 
 /* Formatações da Página [Top to Bottom] */
+/* Header Superior */
+.header--top {
+    background-color: #c2baa1;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Formulário */
 .form--default {
     background-color: #eee;
     width: 60vw;
-    margin: 20vh auto;
+    margin: 5vh auto 10vh;
     padding: 2em;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
+
+    .form--default fieldset {
+        border: none;
+    }
 
     /* Por questões de acessibilidade(Deficientes visuais), o texto é simplesmente escondido do usuário para mesmo assim um leitor de tela ditar a legenda do formulário */
     .form__legend--hidden {
@@ -55,6 +70,7 @@ input:not([type=submit]) {
     }
 
 /* 80 x 16px = 1280px */
+/* Aparelhos Tablet ou PC de baixa resolução */
 @media screen and (min-width: 80em) {
 
     .form--default {

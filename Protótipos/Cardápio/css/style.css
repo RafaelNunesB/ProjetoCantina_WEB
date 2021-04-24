@@ -4,39 +4,41 @@ body {
 }
 
 /* Formatações Gerais de CLASSES */
-
-
-/* Formatações da Página [Top to Bottom] */
-.header--top {
-    background-color: #eee;
-    padding: 2em;
+.a--no-default-style {
+    text-decoration: none;
+    color: black;
 }
 
-    .header--top a {
-        text-decoration: none;
+/* Formatações da Página [Top to Bottom] */
+/* Header Superior */
+.header__ul--lines {
+    background-color: #c2baa1;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+}
+
+    .header__li--line {
+        text-align: center;
     }
 
-        .header__span--icon-menu {
-            font-size: 3em;
-            color: black;
+        .header__li--line a {
+            display: block;
+            padding: 1em 2em;
         }
 
-.main--center {
-    background-color: #ddd;
+/* Seção Principal */
+.section--products {
     display: flex;
-
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-    .main__section--cards {
-        width: 10em;
-        height: 10em;
-        margin: 2em;
-        background-color: #999;
+    .section__div--product {
+        margin: 1em;
     }
 
-        .main__section--cards img {
-            width: 100%;
-            height: 100%;
+        .section__div--product img {
+            width: 10em;
+            height: 10em;
         }
